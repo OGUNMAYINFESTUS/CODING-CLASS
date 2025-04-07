@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(135deg, pink, skyblue, pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0%;
+    color: black;
+}
+
+h1 {
+    font-size: 3em;
+    color: red;
+    text-shadow: 2px 2px 4px black;
+    text-transform: capitalize;
+}
+
+.storybook-page {
+    background-color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px black;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.storybook-page img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px black;
+}
+
+.storybook-page p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: black;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.navigation button {
+    background-color: #9370db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 0 20px;
+}
+
+.navigation button:hover {
+    background-color: #800080;
+    transform: skew(10deg);
+}
+
+.page-background-1 {
+    background-color: #c7c756;
+    /* light yellow */
+}
+
+.page-background-2 {
+    background-color: #67c2c2;
+    /* light cyan */
+}
+
+.page-background-3 {
+    background-color: #3d975b;
+    /* Ghost white */
+}
+
+.text-color-1 {
+    color: #008000;
+    /* green */
+}
+
+.text-color-2 {
+    color: #ffa500;
+    /* orange */
+}
+
+.text-color-3 {
+    color: #0000cd;
+    /* medium blue */
+}
