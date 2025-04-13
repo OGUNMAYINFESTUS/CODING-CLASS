@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(145deg, lightblue, pink, lightgreen);
+    font-family: sans-serif;
+    margin:20px;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+    padding: 20px;
+}
+
+div {
+    background-color: whitesmoke;
+    color: orangered;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    text-align: center;
+    color: orangered;
+    text-shadow: 2px 2px 5px whitesmoke;
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: lightgoldenrodyellow;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 2px 2px 10px black;
+    overflow: hidden;
+}
+th,td {
+    border: 2px solid lightcoral;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+th {
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+tr:nth-child(even) {
+    background-color: lightyellow;
+}
+tr:nth-child(odd) {
+    background-color: lightcyan;
+}
+tr:hover {
+    background-color: lightpink;
+}
+h1:hover {
+    color: lightcoral;
+    text-shadow: 2px 2px 10px black;
+    cursor: pointer;
+}
+
