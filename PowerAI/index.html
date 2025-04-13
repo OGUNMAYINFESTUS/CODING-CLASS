@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Quiz</title>
+    <style>
+        .question {
+            display: none;
+            /* Hide all questions initially */
+        }
+
+        .question.active {
+            display: block;
+            /* Show only the active question */
+        }
+
+        #end-screen {
+            display: none;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quiz</h1>
+
+    <div id="quiz-container">
+
+        <div id="question-1" class="question">
+            <h2>Question 1: What is 2 + 2?</h2>
+            <p>Hint: It's a basic arithmetic operation.</p>
+            <button onclick="showHint(1)">Show Hint</button>
+            <div id="hint-1" style="display: none;">The answer is a small number.</div>
+            <button onclick="submitAnswer(1, '4')">Answer Question</button>
+        </div>
+
+        <div id="question-2" class="question">
+            <h2>Question 2: What is the capital of France?</h2>
+            <p>Hint: Think of romantic cities.</p>
+            <button onclick="showHint(2)">Show Hint</button>
+            <div id="hint-2" style="display: none;">It starts with a 'P'.</div>
+            <button onclick="submitAnswer(2, 'Paris')">Answer Question</button>
+        </div>
+
+        <div id="end-screen" style="display: none;">
+            <h2>Quiz Complete!</h2>
+            <p>Your final score: <span id="final-score"></span></p>
+        </div>
+    </div>
+
+    <p>Time Left: <span id="time-left">10</span> seconds</p>
+    <p>Score: <span id="score">0</span></p>
+
+    <script>
+        let score = 0;
+        let timer;
+        let timeLeft = 10;
+        let currentQuestion = 1;
+
+        function startTimer() {
+            timer = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    showCorrectAnswer();
+                } else {
+                    document.getElementById("time-left").textContent = --timeLeft;
+                }
+            }, 1000);
+        }
+
+        function showHint(questionId) {
+            document.getElementById(`hint-${questionId}`).style.display = "block";
+        }
+
+        function submitAnswer(questionId, correctAnswer) {
+            const userAnswer = prompt("Enter your answer:");
+            if (userAnswer === correctAnswer) {
+                score++;
+                document.getElementById("score").textContent = score;
+            }
+            nextQuestion();
+        }
+
+        function showCorrectAnswer() {
+            clearInterval(timer); // Stop the timer
+            let correctAnswer;
+            if (currentQuestion === 1) {
+                correctAnswer = "4";
+            } else if (currentQuestion === 2) {
+                correctAnswer = "Paris";
+            } else {
+                correctAnswer = "Unknown"; // Handle the case where there are no more questions
+            }
+            alert(`Time's up! The correct answer for Question ${currentQuestion} is: ${correctAnswer}`);
+            nextQuestion();
+        }
+
+
+        function nextQuestion() {
+            timeLeft = 10; // Reset the timer
+            clearInterval(timer); // Stop the current timer
+
+            document.getElementById(`question-${currentQuestion}`).classList.remove("active");
+            currentQuestion++;
+
+            if (document.getElementById(`question-${currentQuestion}`)) {
+                document.getElementById(`question-${currentQuestion}`).classList.add("active");
+                document.getElementById("time-left").textContent = timeLeft;
+                startTimer();
+            } else {
+                // End of quiz
+                document.getElementById("quiz-container").style.display = "none";
+                document.getElementById("end-screen").style.display = "block";
+                document.getElementById("final-score").textContent = score;
+                document.getElementById("time-left").textContent = 0; // Clear the timer display
+            }
+        }
+
+        // Initialize the first question
+        document.getElementById("question-1").classList.add("active");
+        startTimer();
+    </script>
+</body>
+
+</html>

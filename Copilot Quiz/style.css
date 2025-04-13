@@ -1,0 +1,11 @@
+.hint {
+    display: none;
+}
+
+.question-page {
+    display: none;
+}
+
+.question-page.active {
+    display: block;
+}

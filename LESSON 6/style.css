@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(135deg, pink, purple, pink);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px solid black;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    color: orangered;
+    text-align: center;
+    text-shadow: 2px 2px 4px solid black;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1.5em;
+    color: rebeccapurple;
+    text-align: center;
+    text-shadow: 1px 1px 2px solid black;
+    margin: 0;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 8px 10px solid black;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 1.2em;
+}
+
+th {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+tr:nth-child(odd) {
+    background-color: wheat;
+}
+tr:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+tr:hover td {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}

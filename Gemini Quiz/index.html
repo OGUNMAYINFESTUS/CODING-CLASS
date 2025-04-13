@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defest Computers Quiz</title>
+    <link rel="stylesheet" href="/Gemini Quiz/style.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        <h1>Science Quiz</h1>
+        <div class="controls">
+            <div class="timer">Time Left: <span id="time"></span></div>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="progress">Question: <span id="current-question">1</span> of <span id="total-questions"></span>
+            </div>
+            <button id="hint-button">Hint</button>
+            <div id="hint-text" class="hidden"></div>
+        </div>
+
+        <div class="question-pages">
+        </div>
+
+        <div class="navigation">
+            <h3>Select Question:</h3>
+            <div id="question-navigation">
+            </div>
+        </div>
+
+        <div class="results-page hidden">
+            <h2>Quiz Completed!</h2>
+            <p>Your final score is: <span id="final-score"></span></p>
+            <div id="correct-answers">
+                <h3>Correct Answers:</h3>
+            </div>
+            <button id="restart-button">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="/Gemini Quiz/script.js"></script>
+</body>
+
+</html>
