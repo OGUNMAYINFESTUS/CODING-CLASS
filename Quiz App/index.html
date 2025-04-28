@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timed Quiz</title>
+    <link rel="stylesheet" href="/LESSON 3/style.css">
+</head>
+
+<body>
+    <h1>Timed Quiz</h1>
+
+    <div class="navigation">
+        <button data-question="question1">Question 1</button>
+        <button data-question="question2">Question 2</button>
+        <button data-question="question3">Question 3</button>
+    </div>
+
+    <div class="quiz-container">
+        <div class="question" id="question1">
+            <h2>Question 1: What is 2 + 2?</h2>
+            <button class="answer" data-correct="false">3</button>
+            <button class="answer" data-correct="true">4</button>
+            <button class="answer" data-correct="false">5</button>
+            <p class="correct-answer" style="display: none;">Correct Answer: 4</p>
+            <div class="timer">Time Left: <span id="timer1">15</span> seconds</div>
+        </div>
+
+        <div class="question" id="question2" style="display: none;">
+            <h2>Question 2: What color is the sky?</h2>
+            <button class="answer" data-correct="false">Green</button>
+            <button class="answer" data-correct="true">Blue</button>
+            <button class="answer" data-correct="false">Red</button>
+            <p class="correct-answer" style="display: none;">Correct Answer: Blue</p>
+            <div class="timer">Time Left: <span id="timer2">15</span> seconds</div>
+        </div>
+
+        <div class="question" id="question3" style="display: none;">
+            <h2>Question 3: How many sides does a triangle have?</h2>
+            <button class="answer" data-correct="false">2</button>
+            <button class="answer" data-correct="true">3</button>
+            <button class="answer" data-correct="false">4</button>
+            <p class="correct-answer" style="display: none;">Correct Answer: 3</p>
+            <div class="timer">Time Left: <span id="timer3">15</span> seconds</div>
+        </div>
+    </div>
+    <div id="result"></div>
+
+
+
+    <script src="/LESSON 3/script.js"></script>
+</body>
+
+</html>

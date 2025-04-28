@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/Copilot Quiz/style.css">
+</head>
+
+<body>
+    <div id="quiz-container">
+        <div id="question-1" class="question-page">
+            <h2>Question 1: What is 2 + 2?</h2>
+            <p id="timer">Time left: <span id="time-left">10</span> seconds</p>
+            <button onclick="showHint(1)">Show Hint</button>
+            <p id="hint-1" class="hint">Think about basic addition.</p>
+            <button onclick="submitAnswer(1, '4')">Submit</button>
+        </div>
+        <div id="score-container">Score: <span id="score">0</span></div>
+        <button onclick="nextQuestion()">Next</button>
+    </div>
+    <script src="/Copilot Quiz/script.js"></script>
+</body>
+
+</html>
