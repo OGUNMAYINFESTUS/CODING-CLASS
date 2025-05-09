@@ -30,6 +30,7 @@ nav ul{
     padding: 0%;
     margin: 0%;
 }
+
 nav ul li {
     display: inline;
     margin: 0 1em;
@@ -41,4 +42,140 @@ nav ul li:hover{
     text-decoration: underline;
     cursor: pointer;
     color: orange;
+}
+
+.hero {
+    background-color: skyblue;
+    padding: 5em 2em;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+
+.button {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.button:hover {
+    background-color: orangered;
+}
+
+.about, .projects, .contact {
+    padding: 3em 2em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about h2, .projects h2, .contact h2 {
+    font-size: 3em;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.about p {
+    line-height: 1.8;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.project-grid {
+    display: flex;
+    gap: 100px;
+    padding: 20px;
+
+}
+
+.project-card {
+    background-color: azure;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 1.5em;
+}
+
+.project-card h3 {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    text-transform: capitalize;
+}
+
+.project-card p {
+    font-size: 1.0em;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: black;
+    text-transform: capitalize;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 1em 2.0em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.project-card a:hover {
+    background-color: orangered;
+}
+
+.contact p {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+
+}
+.contact ul {
+    list-style: none;
+}
+
+.contact li {
+    margin-bottom: 0.8em;
+}
+.contact strong {
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 }
